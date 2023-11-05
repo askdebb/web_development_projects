@@ -1,0 +1,91 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+.main {
+  flex: 1;
+
+}
+
+.main > .logo {
+  width: 260px;
+  
+}
+
+.main .card {
+  /* border: 30px solid gainsboro; */
+  width: 45%;
+  
+  
+}
+
+.left {
+  float: left;
+  
+  
+}
+
+.right{
+  float: right;
+  /* background-color: red; */
+  
+}
+
+img {
+  float: left;
+  width: 300px;
+  margin-right: 50px;
+}
+
+
+h1 {
+  font-size: 5rem;
+  margin-top: 100px;
+}
+
+h1 span {
+  color: midnightblue;
+}
+
+footer {
+  text-align: right;
+  color: midnightblue;
+  clear: both;
+}
+
+
+/* media queries*/
+
+@media (max-width:680px) {
+  .main .logo {
+    width: 7rem;
+  }
+
+  .main h1 {
+    margin-top: 60px;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .main .card {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+ 
+  .main .card p {
+    text-align: justify;
+  }
+
+}
