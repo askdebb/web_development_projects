@@ -11,7 +11,7 @@
     Gap Colour: #000
     White: #F0F1EC
     Red: #E72F24
-    Black: #232629
+    Black: 
     Blue: #004592
     Yellow: #F9D01E
 
@@ -20,78 +20,83 @@
     But grid lines are transparent!
     */
 
-    
-    .flex-container {
+    body {
+      margin: 0;
+      padding: 0;
       display: flex;
-      margin: 200px 300px;
-      height: 100%;
       justify-content: center;
       align-items: center;
-      background-color: #000;
-    }
-    .grid-container {
-      display: grid;
-      grid-template-columns: 320px 198px 153px 50px;
-      grid-template-rows: 414px 314px 20px;
-      gap: 9px;
+      height: 100vh;
+
     }
 
-    .grid-container .grid-item {
-      background-color: gainsboro;
+
+    .grid-container {
+      height: 748px;
+      width: 748px;
+      display: grid;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 22px;
+      gap: 9px;
+      background-color: black;
+    }
+
+    .grid-item {
+      background-color: #F0F1EC;
     }
 
     .red {
-      background-color: #E72F24 !important;
+      background-color: red;
     }
 
-    .hori-span {
-     /* grid-column: span 3; */
+    .column-span-1 {
+      grid-column: span 3;
+     /* grid-area: 1 / 2 / 2 / 5; */ 
     }
-    .second-hori {
-      /*grid-area: 2 / 2 / 3 / 4 */
+    .row-span-1 {
+      grid-area: 2 / 1 / 4 / 2;
     }
 
-    .grid-container .top-child-grid {
-      height: 130px;
-      width: 50px;
+    .row-span-2 {
+      grid-area: 2 / 2 / 4 / 4;
+    }
+
+    .blue {
       background-color: #004592;
-      border-bottom: 10px solid black;
+      border-bottom: 10px !important;
     }
 
-    .grid-container .bottom-child-grid {
-      background-color: gold !important;
-    /* grid-area: 3 / 4 / 6 / -1; */
+    .row-span-3 {
+      grid-area: 3 / 4 / 5 / 5;
     }
 
     .yellow {
-      background-color: #F9D01E !important;
+      background-color: #F9D01E;
     }
+
     .black {
-      background-color: #232629 !important;
+      background-color: #232629;
     }
+
+   
 
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
-  <div class="flex-container">
-    <div class="grid-container">
-      <div class="grid-item red">1</div>
-      <div class="grid-item hori-span">2</div>
-      <div class="grid-item">3</div>
-      <div class="grid-item second-hori">4</div>
-      <div class="grid-item">5</div>
-      <div class="grid-item">
-        <div class="top-child-grid">6a</div>
-        <div class="bottom-child-grid">6b</div>
-      </div>
-      <div class="grid-item">7</div>
-      <div class="grid-item yellow">8</div>
-      <div class="grid-item black">9</div>
-      <div class="grid-item">10</div>
-    </div>
-  </div>
+
+  <div class="grid-container">
+    <div class="grid-item red"></div>
+    <div class="grid-item column-span-1"></div>
+    <div class="grid-item row-span-1"></div>
+    <div class="grid-item row-span-2"></div>
+    <div class="grid-item blue"></div>
+    <div class="grid-item row-span-3"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item yellow"></div>
+    <div class="grid-item black"></div>
+
 </body>
 
 </html>
