@@ -8,4 +8,4 @@ fs.writeFile("result.txt", "Hello CodeBOLT", (err) => {
 fs.readFile("./result.txt","utf-8", (err, data) => {
     if(err) throw err
     console.log(data);
-})
+});
